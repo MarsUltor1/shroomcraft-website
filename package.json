@@ -1,7 +1,7 @@
 {
-  "name": "twitter",
+  "name": "Shroomcraft",
   "version": "1.0.0",
-  "description": "A Simple Login Example using Node.js, Mongo and Redis",
+  "description": "Website Demo for Shroomcraft Server",
   "main": "./server/app.js",
   "scripts": {
     "webpack": "webpack",
@@ -19,8 +19,8 @@
     "Redis",
     "Login"
   ],
-  "author": "Cody Van De Mark / Austin Willoughby / Mark Grimké",
-  "license": "Apache 2.0",
+  "author": "Mark Grimké",
+  "license": "CC-BY-SA-4.0",
   "devDependencies": {
     "@babel/core": "^7.23.3",
     "@babel/preset-react": "^7.23.3",

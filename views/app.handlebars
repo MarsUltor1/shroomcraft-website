@@ -9,8 +9,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
     integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <meta http-equiv="Content-Security-Policy"
-      content="default-src 'self'; img-src https://*; child-src 'none'; frame-src youtube.com https://www.youtube.com;">
+  {{!-- <meta http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src https://*; child-src 'none'; frame-src youtube.com https://www.youtube.com;"> --}}
 </head>
 
 <body>
@@ -23,15 +23,15 @@
 
     <div class="navbar-menu">
       <div class="navbar-end">
-        <a class="navbar-item" href="http://78.108.218.59:25787/">
+        <a class="navbar-item" href="/map">
           <h2>Map</h2>
         </a>
 
-        <a class="navbar-item" href="/">
+        <a class="navbar-item" href="/players">
           <h2>Players</h2>
         </a>
 
-        <a class="navbar-item" href="/">
+        <a class="navbar-item" href="/modpack">
           <h2>Mod Pack</h2>
         </a>
       </div>
@@ -41,7 +41,7 @@
   <iframe width="560" height="315" src="https://www.youtube.com/embed/m3ouS-DAypU?si=QwNLRGd76Zj92u4q" title="YouTube video player"></iframe>
   <iframe src="http://78.108.218.59:25787/" frameborder="1"></iframe>
 
-  <script src="/assets/appBundle.js"></script>
+  {{!-- <script src="/assets/appBundle.js"></script> --}}
 </body>
 
 </html>

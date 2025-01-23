@@ -2,31 +2,31 @@ const controllers = require('./controllers');
 const mid = require('./middleware');
 
 const router = (app) => {
-  app.get('/getTweets', mid.requiresLogin, controllers.Tweet.getTweets);
+  app.get('/getTweets', controllers.Tweet.getTweets);
   app.get('/getAllTweets', controllers.Tweet.getAllTweets);
 
-  app.get('/login', mid.requiresSecure, mid.requiresLogout, controllers.Account.loginPage);
-  app.post('/login', mid.requiresSecure, mid.requiresLogout, controllers.Account.login);
+  app.get('/login', mid.requiresSecure, controllers.Account.loginPage);
+  app.post('/login', mid.requiresSecure, controllers.Account.login);
 
-  app.post('/signup', mid.requiresSecure, mid.requiresLogout, controllers.Account.signup);
+  app.post('/signup', mid.requiresSecure, controllers.Account.signup);
 
-  app.get('/logout', mid.requiresLogin, controllers.Account.logout);
+  app.get('/logout', controllers.Account.logout);
 
-  app.post('/changePassword', mid.requiresLogin, mid.requiresSecure, controllers.Account.changePassword);
+  app.post('/changePassword', mid.requiresSecure, controllers.Account.changePassword);
 
-  app.get('/account', mid.requiresLogin, controllers.Account.accountPage);
-  app.get('/accountInfo', mid.requiresLogin, controllers.Account.getInfo);
+  app.get('/account', controllers.Account.accountPage);
+  app.get('/accountInfo', controllers.Account.getInfo);
 
-  app.post('/getPremium', mid.requiresLogin, controllers.Account.makePremium);
-  app.post('/cancelPremium', mid.requiresLogin, controllers.Account.cancelPremium);
+  app.post('/getPremium', controllers.Account.makePremium);
+  app.post('/cancelPremium', controllers.Account.cancelPremium);
 
-  app.get('/tweet', mid.requiresLogin, controllers.Tweet.writingPage);
-  app.post('/tweet', mid.requiresLogin, controllers.Tweet.writeTweet);
+  app.get('/tweet', controllers.Tweet.writingPage);
+  app.post('/tweet', controllers.Tweet.writeTweet);
 
-  app.post('/togglePrivacy', mid.requiresLogin, controllers.Tweet.togglePrivacy);
-  app.post('/deleteTweet', mid.requiresLogin, controllers.Tweet.deleteTweet);
+  app.post('/togglePrivacy', controllers.Tweet.togglePrivacy);
+  app.post('/deleteTweet', controllers.Tweet.deleteTweet);
 
-  app.get('/', mid.requiresSecure, mid.requiresLogout, controllers.Account.loginPage);
+  app.get('/', mid.requiresSecure, controllers.Account.loginPage);
   app.get('/*', controllers.get404);
 };
 

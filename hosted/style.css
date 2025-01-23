@@ -1,7 +1,3 @@
-:root {
-  --bulma-primary: $primary ;
-}
-
 .is-active {
   background-color: hsl(229, 53%, 53%);
 }

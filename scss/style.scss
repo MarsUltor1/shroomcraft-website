@@ -54,16 +54,17 @@ form {
 /* Track */
 ::-webkit-scrollbar-track {
     background: $secondary;
-    border-radius: 10px;
+    //border-radius: 10px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
     background: $primary;
-    border-radius: 10px;
+    //border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: $primary-light;
 }
+

@@ -10,11 +10,9 @@ const helmet = require('helmet');
 
 const router = require('./router.js');
 
-const socketSetup = require('./io.js');
-
 const port = process.env.PORT || process.env.NODE_PORT || 3000;
 
-const dbURI = process.env.MONGODB_URI || 'mongodb://127.0.0.1/Project-2';
+const dbURI = process.env.MONGODB_URI || 'mongodb://127.0.0.1/Shroomcraft';
 mongoose.connect(dbURI).catch((err) => {
   if (err) {
     console.log('Could not connect to database');
@@ -37,9 +35,7 @@ app.set('views', `${__dirname}/../views`);
 
 router(app);
 
-const server = socketSetup(app);
-
-server.listen(port, (err) => {
+app.listen(port, (err) => {
   if (err) {
     throw err;
   }

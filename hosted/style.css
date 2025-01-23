@@ -1,3 +1,7 @@
+:root {
+  --bulma-primary: $primary ;
+}
+
 .is-active {
   background-color: hsl(229, 53%, 53%);
 }
@@ -50,13 +54,11 @@ form {
 /* Track */
 ::-webkit-scrollbar-track {
   background: #969696;
-  border-radius: 10px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: hsl(229, 53%, 53%);
-  border-radius: 10px;
 }
 
 /* Handle on hover */

@@ -2,7 +2,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Twitter</title>
+  <title>Shroomcraft</title>
   <link rel="shortcut icon" href="/assets/img/favicon.png" />
   <link rel="stylesheet" type="text/css" href="/assets/style.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
@@ -12,51 +12,30 @@
 </head>
 
 <body>
-  <div class="columns">
-    <div class="column" id="nav">
-      <aside class="menu">
-        <p class="menu-label">
-          Tweets
-        </p>
-        <ul class="menu-list">
-          <li><a id="myTweetsBtn">My Page</a></li>
-          <li><a id="allTweetsBtn">Public Feed</a></li>
-        </ul>
-        <p class="menu-label">
-          Account
-        </p>
-        <ul class="menu-list">
-          <li><a href="/Account">Profile</a></li>
-          <li><a href="/logout">Logout</a></li>
-        </ul>
-      </aside>
+  <nav class="navbar is-primary">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        <h1>Shroomcraft</h1>
+      </a>
     </div>
 
-    <div class="column is-half" id="tweetColumn">
-      <div id="writingSection">
-        <div class="block" id="writeTweet">
+    <div class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="http://78.108.218.59:25787/">
+          <h2>Map</h2>
+        </a>
 
-        </div>
+        <a class="navbar-item" href="/">
+          <h2>Players</h2>
+        </a>
 
-        <div class="hidden" id="errorMessage"></div>
-        <hr>
-      </div>
-
-      <div class="block" id="sponsorDiv">
-
-      </div>
-      
-      <div class="block" id="tweets">
-
+        <a class="navbar-item" href="/">
+          <h2>Mod Pack</h2>
+        </a>
       </div>
     </div>
-
-    <div class="column">
-
-    </div>
-  </div>
-
-  <script src="/socket.io/socket.io.js"></script>
+  </nav>
+  
   <script src="/assets/appBundle.js"></script>
 </body>
 

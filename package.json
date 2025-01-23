@@ -19,8 +19,8 @@
     "Redis",
     "Login"
   ],
-  "author": "Mark Grimké",
-  "license": "CC-BY-SA-4.0",
+  "author": "Cody Van De Mark / Austin Willoughby / Mark Grimké",
+  "license": "Apache-2.0",
   "devDependencies": {
     "@babel/core": "^7.23.3",
     "@babel/preset-react": "^7.23.3",

@@ -23,13 +23,24 @@ mongoose.connect(dbURI).catch((err) => {
 const app = express();
 
 app.use(helmet({
-  contentSecurityPolicy: {
-    directives: {
-      "default-src": ["'self'", "http://78.108.218.59:25787/"],
-      "img-src": ["https://*"],
-      "frame-src": ["youtube.com", "https://www.youtube.com", "http://78.108.218.59:25787/"]
-    },
-  },
+  // contentSecurityPolicy: {
+  //   directives: {
+  //     "default-src": ["'self'", "http://78.108.218.59:25787/"],
+  //     "frame-src": ["https://www.youtube.com", "http://78.108.218.59:25787/"],
+  //     "connect-src": ["http://78.108.218.59:25787/"],
+  //     "media-src": ["http://78.108.218.59:25787/"],
+  //     "img-src": ["http://78.108.218.59:25787/"],
+  //     "child-src": ["http://78.108.218.59:25787/"],
+  //     "fenced-frame-src": ["http://78.108.218.59:25787/"],
+  //     "font-src": ["http://78.108.218.59:25787/"],
+  //     "manifest-src": ["http://78.108.218.59:25787/"],
+  //     "object-src": ["http://78.108.218.59:25787/"],
+  //     "script-src": ["http://78.108.218.59:25787/"],
+  //     "worker-src": ["http://78.108.218.59:25787/"]
+  //   },
+  // },
+  
+  contentSecurityPolicy: false,
   crossOriginEmbedderPolicy: false,
   crossOriginOpenerPolicy: true
 }));

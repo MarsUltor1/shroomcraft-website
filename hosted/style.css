@@ -11,13 +11,9 @@
 }
 
 /* based on: https://www.geeksforgeeks.org/making-a-div-vertically-scrollable-using-css/ */
-#tweetColumn {
+#mapArea {
   height: 95%;
-  overflow-y: auto;
-}
-
-.tweet {
-  padding-bottom: 2rem;
+  overflow-y: hidden;
 }
 
 .hidden {
